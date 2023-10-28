@@ -18,7 +18,7 @@ function submitButton(event){
     <td>${ID}</td>
     <td>${jobTitle}</td>
     <td>${salary}</td>
-    <td><button onclick="deleteButton(event)">❌</button></td>
+    <td><button onclick="deleteButton(event)">Delete</button></td>
   </tr>`
 
   document.getElementById("first-name").value = '';
@@ -34,5 +34,5 @@ function submitButton(event){
 
 function deleteButton(event) {
   console.log("delete");
-  event.target.parentElement.parentElement.parentElement.remove();
+  event.target.parentElement.parentElement.remove();
 }
