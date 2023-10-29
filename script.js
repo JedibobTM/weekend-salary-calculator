@@ -30,20 +30,21 @@ function submitButton(event){
   sum += Number(salary) / 12;
   document.getElementById("salary-count").textContent = sum;
 
-  if (sum > 20000) {
-    console.log('Over');
-
-    document.getElementById("salary-count").style.color = "red";
-  } else {
-    document.getElementById("salary-count").style.color = "black";
-
+  function overBudget(event) {
+    console.log('testing overBudget');
+     if (sum > 20000) {
+     let footer = document.querySelector('footer');
+     console.log(footer);
+     footer.classList.add('over-budget')
+    }
   }
-
-  
-
+  overBudget();
 }
 
 function deleteButton(event) {
   console.log('Deleting')
   event.target.parentElement.parentElement.remove("text");
 }
+
+
+
